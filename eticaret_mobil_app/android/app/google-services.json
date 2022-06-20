@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "355247710086",
+    "project_id": "eticaret-mobil-734d3",
+    "storage_bucket": "eticaret-mobil-734d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355247710086:android:6fe21c4f5fa8e646c65607",
+        "android_client_info": {
+          "package_name": "com.avensise.eticaret_mobil_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355247710086-v57i5cjmjset5ofh9sgtkumkpqhrg25c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avensise.eticaret_mobil_app",
+            "certificate_hash": "1bd935d68a13dfdabc54ca332159a69ea834561c"
+          }
+        },
+        {
+          "client_id": "355247710086-78bu1r62pniv2cm9oe98la1rh1ag4dsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe7-JMfHBSYEbQsFjxjA6XPPsa32tu5Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355247710086-78bu1r62pniv2cm9oe98la1rh1ag4dsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
