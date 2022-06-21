@@ -7,11 +7,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:uuid/uuid.dart';
 
 class UploadProductController{
-  _uploadImagetToStorage(File? imageUrl)async{
+  _uploadImagetToStorage(File? imageUrl, String id)async{
     Reference ref = firebaseStorage
     .ref()
     .child('products')
-    .child(firebaseAuth.currentUser!.uid);
+    .child(firebaseAuth.currentUser!.uid + '_' + id);
     UploadTask uploadTask = ref.putFile(imageUrl!);
     TaskSnapshot snap=await uploadTask;
     String downloadUrl =await snap.ref.getDownloadURL();
@@ -35,7 +35,7 @@ class UploadProductController{
       description.isNotEmpty &&
       quantity.isNotEmpty && 
       imageUrl != null){
-        String downloadUrl =await _uploadImagetToStorage(imageUrl);
+        String downloadUrl =await _uploadImagetToStorage(imageUrl, id);
         await firebaseStore.collection('products').doc(productId).set({
           'title':title,
           'id':id,

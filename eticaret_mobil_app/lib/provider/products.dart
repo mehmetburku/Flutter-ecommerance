@@ -7,6 +7,9 @@ import '../models/products.dart';
 
 class Products with ChangeNotifier{
 List<Product> _products=[];
+List<Product> get products {
+    return _products;
+  }
 
   Future<void> fetchProducts()async{
     await FirebaseFirestore.instance
@@ -23,23 +26,23 @@ List<Product> _products=[];
           description: element.get('description'), 
           price: double.parse(element.get('price')), 
           imageUrl: element.get('imageUrl'), 
-          productCategoryname: element.get('productCategoryname'), 
-          quantity: int.parse(element.get('quantity'),
-          )));
-         notifyListeners();
+          productCategoryname: element.get('productCategoryName'), 
+          quantity: int.parse(element.get('quantity')),
+          ));
       });
     });
   }
   Product findById(String productId){
     return _products.firstWhere((element) => element.id==productId,);
   }
-  List<Product>get products{
-    return  _products;
-  }
 
-  List<Product> findByCategory(String categoryName){
-    List _categoryList =_products.where((element) => element.productCategoryname.toLowerCase().contains(categoryName.toLowerCase())).toList();
+
+  List<Product> findByCategory(String productCategoryname){
+    List _categoryList =_products
+    .where((element) => element.productCategoryname
+    .toLowerCase()
+    .contains(productCategoryname.toLowerCase()))
+    .toList();
     return [..._categoryList]; 
   }
-  notifyListeners();
 }

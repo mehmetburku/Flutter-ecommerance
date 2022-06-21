@@ -22,13 +22,14 @@ class _FeedsProductsState extends State<FeedsProducts> {
     final _productsProvider = Provider.of<Products>(context);
     return Container(
       margin: EdgeInsets.only(left: 5, right: 5),
-      child: GestureDetector(
-        onTap: (){
-          Navigator.of(context).pushNamed(DetailPage.id, arguments: products.id);
-        },
-        child: Card(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15),
-          ),
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(12),
+          onTap: (){
+            Navigator.of(context).pushNamed(DetailPage.id, arguments: products.id);
+          },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
