@@ -158,7 +158,7 @@ class _UploadProductFormState extends State<UploadProductForm> {
                                     RegExp(r'[0-9]')),
                               ],
                               decoration: InputDecoration(
-                                labelText: 'Price \$',
+                                labelText: 'Price',
 
                                 // ),
                               ),

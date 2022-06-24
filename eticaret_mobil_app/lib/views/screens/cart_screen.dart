@@ -67,7 +67,7 @@ class CartScreen extends StatelessWidget {
                       'userId' : firebaseAuth.currentUser!.uid,
                       'title' : orderValue.title,
                       'price' : orderValue.price,
-                      'image' : orderValue.imageUrl,
+                      'imageUrl' : orderValue.imageUrl,
                       'quantity': orderValue.quantity,
                       'orderDate' :Timestamp.now()
                     });

@@ -45,4 +45,14 @@ List<Product> get products {
     .toList();
     return [..._categoryList]; 
   }
+
+
+  List<Product> serachQuery(String searchText){
+    List _serachList = _products
+    .where((element) => 
+    element.title.toLowerCase().contains(searchText.toLowerCase()))
+    .toList();
+
+    return [..._serachList];
+  }
 }

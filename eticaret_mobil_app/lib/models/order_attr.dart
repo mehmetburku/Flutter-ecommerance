@@ -1,6 +1,7 @@
 
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/widgets.dart';
 
 class OrderAttr with  ChangeNotifier{
@@ -11,6 +12,7 @@ class OrderAttr with  ChangeNotifier{
   final String price;
   final String imageUrl;
   final String quantity;
+  final Timestamp orderDate;
 
   OrderAttr({
     required this.orderId, 
@@ -19,7 +21,9 @@ class OrderAttr with  ChangeNotifier{
     required this.title, 
     required this.price, 
     required this.imageUrl, 
-    required this.quantity, 
+    required this.quantity,
+    required this.orderDate,
+
     });
 
 
